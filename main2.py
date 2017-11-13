@@ -1,4 +1,4 @@
-# Conway's Game of Life
+# Conway's Game of Life - www.101computing.net/conways-game-of-life
 import turtle
 import time
 from random import randint
@@ -75,6 +75,7 @@ def box(intDim):
 # A subroutine to apply the four key rules of Conway's Game of Life to a specified cell of the grid
 def checkCell(row, col, grid):
     global gridSize
+    # We will count neighbours except when at the edge of the grid
     minRow = 0
     if row > 1:
         minRow = row - 1
@@ -122,7 +123,7 @@ def randomGrid():
     return grid
 
 
-# Create a grid with a blinker pattern
+# Create a grid with a Glider pattern
 def blinker():
     grid = []
     grid.append([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
@@ -171,6 +172,7 @@ def toad():
 
 
 # Create a grid with a Beacon pattern
+
 def beacon():
     grid = []
     grid.append([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
@@ -207,7 +209,7 @@ def pulsar():
     return grid
 
 
-# Create a grid with a Pentadecathlon pattern
+# Create a grid with a Pulsar pattern
 def pentadecathlon():
     grid = []
     grid.append([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
@@ -228,7 +230,7 @@ def pentadecathlon():
     grid.append([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
     return grid
 
-# Create a grid with a Lightweight Spaceship pattern
+
 def spaceship():
     grid = []
     grid.append([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])

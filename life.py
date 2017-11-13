@@ -18,6 +18,12 @@ GLIDER = {
     (1, 0),
 }
 
+BLINKER = {
+    (1, 0),
+    (1, 1),
+    (1, 2),
+}
+
 
 def neighbors(cell, distance=1):
     """Return the neighbors of cell."""
@@ -51,14 +57,14 @@ def print_board(board, size=None):
     for i in range(sizex + 1):
         for j in range(sizey + 1):
             sys.stdout.write(' x ' if (i, j) in board else ' . ')
-        print
+        print()
 
 
 def constrain(board, size):
     return set(cell for cell in board if cell[0] <= size and cell[1] <= size)
 
 
-def main(board, steps=75, size=20):
+def main(board, steps=5, size=20):
     for i in range(1, steps + 1):
         sys.stdout.write('\033[H')  # move to the top
         sys.stdout.write('\033[J')  # clear the screen
@@ -69,4 +75,4 @@ def main(board, steps=75, size=20):
 
 
 if __name__ == '__main__':
-    main(GLIDER)
+    main(BLINKER)
