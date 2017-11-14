@@ -257,14 +257,14 @@ def spaceship():
 ####################### MAIN PROGRAM STARTS HERE ######################
 print("##########################")
 print("Select a Starting Pattern:")
-print("  1: Random Grid")
-print("  2: blinker")
-print("  3: toad")
-print("  4: beacon")
+print("  1: Random live cell")
+print("  2: Blinker")
+print("  3: Toad")
+print("  4: Beacon")
 print("  5: Pulsar")
 print("  6: Pentadecathlon")
-print("  7: glider")
-print("  8: lightweight spaceship")
+print("  7: Glider")
+print("  8: Lightweight Spaceship")
 choice = input("Your Choice (1-8)?")
 
 if choice == "1":
